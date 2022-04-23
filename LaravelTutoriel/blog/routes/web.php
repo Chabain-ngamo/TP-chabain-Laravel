@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user', [UserController::class, 'index']);
+Route::get('post/{slug}', [PostController::class, 'show']);
+Route::get('user/profile', [UserController::class, 'show'])->name('profile');
+
+use App\Http\Controllers\IndexController;
+
+Route::get('/', IndexController::class);
