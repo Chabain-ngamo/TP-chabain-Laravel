@@ -1,4 +1,4 @@
-@extends('master')
+@extends('templates.master')
 
 @section('meta')
     <meta charset="UTF-8">
@@ -9,5 +9,5 @@
 @endsection
 
 @section('content')
-    <p>Corps du contenu.</p>
+    <p>Bonjour, {{ $name }}.</p>
 @endsection
